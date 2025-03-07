@@ -6,7 +6,7 @@
  * @param n the number of repayments (your mortgage length in years * 12)
  * @returns 
  */
-function calculateMortgate(principal:number,r:number,n:number){
+export function calculateMortgate(principal:number,r:number,n:number){
     const tNumerator = principal * r ** n
     const tDenominator = r **n-1
     const tCoefficient = r-1
@@ -22,7 +22,7 @@ function calculateMortgate(principal:number,r:number,n:number){
  * @param r the multiplier for the monthly interest rate. E.g if your mortgage rate is 12%, this would be 1.01
  * @param payment the amount to be paid monthly
  */
-function generatePaymentsTable(principal:number,r:number,payment:number){
+export function generatePaymentsTable(principal:number,r:number,payment:number){
     const data=[];
     let count=0;
     let remaining = principal
