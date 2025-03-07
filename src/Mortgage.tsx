@@ -44,7 +44,7 @@ function App() {
         const repayments = generatePaymentsTable(+principal, 1 + interest / 12 / 100, +payment);
         setResults2(repayments);
       }}> Submit</button>
-      {results2.length && (<><h3> You would make a total of {results2.length} payments over {Math.floor(results2.length / 12)} years and {results2.length % 12} months</h3><table id="results">
+      {results2.length && (<><h3> You would make a total of {results2.length} payments over {Math.floor(results2.length / 12)} years and {results2.length % 12} months (though possibly a month less due to rounding)</h3><table id="results">
         <tr><td>Remaining</td><td>Interest</td><td>payment</td><td>Now Remaining</td></tr>
         {results2.map((result, i) => (
           <tr key={i}><td>{result.remaining}</td><td>{result.interest}</td><td>{result.payment}</td><td>{result.nowRemaining}</td></tr>
