@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { calculateMortgate, generatePaymentsTable } from "./mortgageLogic";
+import { calculateMortgage, generatePaymentsTable } from "./mortgageLogic";
 
 function App() {
   const [principal, setPrincipal] = useState(0);
@@ -20,7 +20,7 @@ function App() {
         </p>
       </div>
       <h1>Mortgage Calculator</h1>
-      <h2>Calculate Mortgate</h2>
+      <h2>Calculate Mortgage</h2>
       <div className="card">
         <label> Principal</label>
         <input
@@ -49,7 +49,7 @@ function App() {
         <button
           onClick={(e) => {
             e.preventDefault();
-            const mortgage = calculateMortgate(
+            const mortgage = calculateMortgage(
               principal,
               1 + interest / 12 / 100,
               length * 12

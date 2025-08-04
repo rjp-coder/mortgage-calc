@@ -5,7 +5,7 @@
  * @param n the number of repayments (your mortgage length in years * 12)
  * @returns
  */
-export function calculateMortgate(principal: number, r: number, n: number) {
+export function calculateMortgage(principal: number, r: number, n: number) {
   const tNumerator = principal * r ** n;
   const tDenominator = r ** n - 1;
   const tCoefficient = r - 1;
